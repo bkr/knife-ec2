@@ -1053,8 +1053,6 @@ EOH
 
         if config[:ebs_optimized]
           server_def[:ebs_optimized] = "true"
-        else
-          server_def[:ebs_optimized] = "false"
         end
 
         if ami.root_device_type == "ebs"
