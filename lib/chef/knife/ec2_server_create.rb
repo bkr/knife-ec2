@@ -1094,8 +1094,7 @@ EOH
             [{
                'DeviceName' => ami_map["deviceName"],
                'Ebs.VolumeSize' => ebs_size,
-               'Ebs.DeleteOnTermination' => delete_term,
-               'Ebs.VolumeType' => config[:ebs_volume_type],
+               'Ebs.DeleteOnTermination' => delete_term
              }]
           server_def[:block_device_mapping].first['Ebs.Iops'] = iops_rate unless iops_rate.empty?
           server_def[:block_device_mapping].first['Ebs.Encrypted'] = true if locate_config_value(:ebs_encrypted)
